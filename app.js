@@ -39,3 +39,5 @@ $('.urutan_tahun').on('click', (e) => {
 
     // deskripsi
 })
+
+// Prallax
