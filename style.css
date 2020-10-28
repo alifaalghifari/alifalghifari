@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: 100%;
+    height: 700px;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header .interests{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.header .interests h4{
+    font-size: 40px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header .avatar{
+    position: absolute;
+    bottom: -60px;
+    opacity: 1;
+    
+}
+
+.header .avatar img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+
+/* Content */
+
+.content{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+    padding-top: 100px;
+}
+
+.biodata{
+    width: 75%;
+    height: 300px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-sizing: border-box;
+    margin: 0 80px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.biodata div{
+    width: 300px;
+    height: 80px;
+    background-color: #686d76;
+    margin: 30px;
+    border-radius: 5px;
+    cursor: context-menu;
+    display: flex;
+    transition: .3s ;
+}
+
+.biodata div:hover{
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.biodata div p{
+    margin: auto;
+    color: #fbf7f0;
+    transition: inherit;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.biodata div:hover p{
+    font-size: 18px;
+}
+
+/* pendidikan */
+
+.pendidikan{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pendidikan .urutan_tahun{
+    width: 100%;
+    height: 1px;
+    background-color: khaki;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pendidikan .urutan_tahun div{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: lawngreen;
+    position: relative;
+    top: -50px;
+}
+
+.urutan_tahun div{
+    display: flex;
+    cursor: pointer;
+}
+
+.urutan_tahun div h2{
+    margin: auto;
+}
+
+.check {
+    transform: translateY(-20px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 59px 31px -18px;
+    
+    transition: .5s;
+} 
+
+.no_check{
+    transform: translateY(0);
+    box-shadow: none;
+    
+    transition: .5s;
+}
+.pendidikan .deskripsi{
+    margin: 130px 200px;
+    width: 800px;
+    height: 400px;
+    box-shadow: -1px 4px 13px 14px rgba(0, 0, 0, 0.2), 1px 1px 6px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+}
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+.pendidikan .deskripsi p{
+    margin: auto;
+    font-size: 30px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+
