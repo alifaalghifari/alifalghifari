@@ -1,7 +1,7 @@
-let sd = "<p>Masuk SD</p>";
-let smp = "<p>Masuk SMP</p>";
-let sma = "<p>Masuk SMA</p>";
-let kuliah = "<p>Masuk kuliah</p>";
+let sd = "<p>2007, Saya masuk Sekolah dasar di kampung, SD DDI Siboang. Tahun itu adalah tahun pertama sekolah itu buka. Sehingga saya adalah murid angkatan pertama di SD DDI Siboang.</p>";
+let smp = "<p>Tahun 2013, saya melanjutkan Sekolah Menengah Pertama di MTS Negeri Palu barat. Berjarak sekitar 200km , dengan menempuh 5-6 jam perjalanan dari kampung.</p>";
+let sma = "<p>Lulus dari MTS tahun 2016, kemudian SMA Negeri 6 Palu.</p>";
+let kuliah = "<p>Saat ini saya sedang menempuh pendidikan strata 1 Teknik Informatika Universitas Tadulako.</p>";
 
 function deskripsi(target) {
     if (target.hasClass('sd')) {
@@ -41,3 +41,29 @@ $('.urutan_tahun').on('click', (e) => {
 })
 
 // Prallax
+
+$('.header .interests, .avatar').css({
+    'transform': 'translateY(0px)',
+    'transition': '1.5s'
+})
+
+$(window).scroll(() => {
+    let scroll = $(this).scrollTop();
+
+    // Header
+    $('.interests').css({
+        'transform': 'translate(0px,' + scroll / 1.2 + '%)',
+        'transition': '0s'
+    });
+
+
+    // Biodata
+    if (scroll > 40) {
+        $('.biodata').addClass('biodata_in');
+    } else if (scroll < 40) {
+        $('.biodata').removeClass('biodata_in');
+
+        $('.biodata').addClass('biodata_out');
+    }
+
+})

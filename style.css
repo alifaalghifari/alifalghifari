@@ -22,6 +22,8 @@
     flex-flow: row;
     width: 100%;
     justify-content: space-evenly;
+    transform: translateY(-140px);
+
 }
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 .header .interests h4{
@@ -35,6 +37,7 @@
     position: absolute;
     bottom: -60px;
     opacity: 1;
+    transform: translateY(-140px);
     
 }
 
@@ -55,6 +58,24 @@
     padding-top: 100px;
 }
 
+/* Biodata */
+
+.title{
+    width: 200px;
+    height: 100px;
+    /* margin-bottom: 50px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.title h3{
+    font-size: 40px;
+    color: #495464;
+}
+
 .biodata{
     width: 75%;
     height: 300px;
@@ -65,6 +86,21 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+    transform: translateY(100px);
+    visibility: hidden;
+}
+
+.biodata_out{
+    transform: translateY(100px);
+    visibility: hidden;
+    transition: .5s;
+}
+
+.biodata_in{
+    visibility: visible;
+    transform: translateY(0);
+    transition:1.5s;
 }
 
 .biodata div{
@@ -97,9 +133,12 @@
 
 /* pendidikan */
 
+.tpendidikan{
+    margin-top: 50px;
+}
 .pendidikan{
     width: 100%;
-    margin-top: 50px;
+    margin-top: 100px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -109,7 +148,7 @@
 .pendidikan .urutan_tahun{
     width: 100%;
     height: 1px;
-    background-color: khaki;
+    background-color: #686d76;
     display: flex;
     justify-content: space-around;
 }
@@ -118,7 +157,7 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-color: lawngreen;
+    background-color: #519872;
     position: relative;
     top: -50px;
 }
@@ -130,6 +169,7 @@
 
 .urutan_tahun div h2{
     margin: auto;
+    color: #41444b;
 }
 
 .check {
@@ -155,11 +195,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 .pendidikan .deskripsi p{
     margin: auto;
+    padding: 3px;
     font-size: 30px;
+    text-indent: 20px;
+    letter-spacing: 5px;
+    text-align: center;
     font-family: 'Architects Daughter', cursive;
 }
 
 /* Skills */
+
 
 .skills{
     display: flex;
@@ -170,8 +215,8 @@
 }
 
 .skills div{
-    width: 300px;
-    height: 500px;
+    width: 400px;
+    height: 300px;
     transform-style: preserve-3d;
     perspective: 800px;
     transition: .5s;
@@ -187,17 +232,23 @@
 }
 
 .front{
-    height: 100%;
-    width: 100%;
-    background-color: cadetblue;
+    background-color: #8bcdcd;
     transform: rotateX(0deg);
     transition: .5s;
     position: absolute;
     top: 0;
     left: 0;    
     backface-visibility: hidden;
+    display: flex;
+}
+
+.front h3{
+    margin: auto;
+    font-family: 'Architects Daughter', cursive;
+    color: #f4f4f2;
 
 }
+
 
 .back{
     height: 100%;
@@ -209,7 +260,21 @@
     top: 0;
     left: 0;
     backface-visibility: hidden;
+    display: flex;
+}
 
+.back span{
+    margin: auto;
+    width: 3px;
+    height: 25px;
+    background-color: #f4f4f2;
+}
+
+.back p{
+    margin: auto;
+    font-family: 'Architects Daughter', cursive;
+    color: #f4f4f2;
+    font-size: 20px;
 }
 
 /* Kontak */
@@ -263,4 +328,21 @@
 
 .kontak div:hover p{
     opacity: 1;
+}
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #e8e8e8;
+}
+
+.footer p, .footer span{
+    font-size: 20px;
+    color: #6e6d6d;
 }
