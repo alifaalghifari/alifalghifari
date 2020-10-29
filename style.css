@@ -63,18 +63,34 @@
 .title{
     width: 200px;
     height: 100px;
-    /* margin-bottom: 50px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    transform: translateY(100px);
+    visibility: hidden;
+    transition: 1s;
+
 }
 
+.t_in{
+    transform: translateY(0);
+    visibility: visible;
+    transition: 1s;
+}
+
+.t_out{
+    transform: translateY(100px);
+    visibility: hidden;
+    transition: 1s;
+}
 
 .title h3{
     font-size: 40px;
     color: #495464;
+    font-family: 'Open Sans', sans-serif;
+    
 }
+
 
 .biodata{
     width: 75%;
@@ -106,7 +122,7 @@
 .biodata div{
     width: 300px;
     height: 80px;
-    background-color: #686d76;
+    background-color: #8bcdcd;
     margin: 30px;
     border-radius: 5px;
     cursor: context-menu;
@@ -115,16 +131,18 @@
 }
 
 .biodata div:hover{
-    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
 }
 
+
+
 .biodata div p{
     margin: auto;
-    color: #fbf7f0;
+    color: #1c2b2d;
     transition: inherit;
     font-family: 'Open Sans', sans-serif;
-
+    font-size: 18px;
 }
 
 .biodata div:hover p{
@@ -151,13 +169,15 @@
     background-color: #686d76;
     display: flex;
     justify-content: space-around;
+
+    
 }
 
 .pendidikan .urutan_tahun div{
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-color: #519872;
+    background-color: #8bcdcd;
     position: relative;
     top: -50px;
 }
